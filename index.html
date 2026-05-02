@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전세 체크리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="checklist-area">
+        <header>
+            <h1>🏠 전세 체크리스트</h1>
+        </header>
+
+        <section class="info-section card">
+            <h2>매물 기본 정보</h2>
+            <div class="info-grid">
+                <label>
+                    <span>주소</span>
+                    <input type="text" id="address" placeholder="주소 입력">
+                </label>
+                <label>
+                    <span>전세금/보증금</span>
+                    <input type="text" id="deposit" placeholder="예: 1억 5000만원">
+                </label>
+                <label>
+                    <span>월세</span>
+                    <input type="text" id="rent" placeholder="예: 50만원 (없으면 비워두기)">
+                </label>
+                <label>
+                    <span>관리비</span>
+                    <input type="text" id="maintenance" placeholder="예: 10만원">
+                </label>
+                <label>
+                    <span>계약기간</span>
+                    <input type="text" id="contract-period" placeholder="예: 2년">
+                </label>
+                <label>
+                    <span>입주 가능일</span>
+                    <input type="date" id="move-in-date">
+                </label>
+                <label class="full-width">
+                    <span>메모</span>
+                    <textarea id="memo" rows="2" placeholder="기타 메모"></textarea>
+                </label>
+            </div>
+        </section>
+
+        <section class="checklist-section card">
+            <h2>집 상태</h2>
+            <div class="checklist-items">
+                <div class="check-item">
+                    <span class="item-label">누수</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">곰팡이</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">벽 상태</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">바닥 상태</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">창문/방충망</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">도배/장판</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">문 잠금장치</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist-section card">
+            <h2>시설/편의</h2>
+            <div class="checklist-items">
+                <div class="check-item">
+                    <span class="item-label">수압</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">온수</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">난방</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">환기</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">콘센트 수</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">인터넷</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">가스레인지/인덕션</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">에어컨</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">세탁기 자리</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist-section card">
+            <h2>주변 환경</h2>
+            <div class="checklist-items">
+                <div class="check-item">
+                    <span class="item-label">대중교통 접근성</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">편의점/마트</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">소음(층간/외부)</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">일조량</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">보안/CCTV</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">주차</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist-section card">
+            <h2>기타</h2>
+            <div class="checklist-items">
+                <div class="check-item">
+                    <span class="item-label">반려동물 가능 여부</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">전입신고 가능</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <span class="item-label">등기부등본 확인</span>
+                    <div class="btn-group">
+                        <button class="btn-ok" data-value="ok">OK</button>
+                        <button class="btn-bad" data-value="bad">불량</button>
+                        <button class="btn-na" data-value="na">N/A</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="actions">
+        <button id="save-image" class="action-btn">📷 이미지로 저장</button>
+        <button id="reset-all" class="action-btn action-btn-secondary">🔄 초기화</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
